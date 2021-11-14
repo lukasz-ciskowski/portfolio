@@ -47,28 +47,27 @@ export function useContact() {
     }, [contactForm])
 
     const onSubmit = useCallback(async () => {
-        setResult({ state: "loading" })
-        // const validationResult = validate(contactForm)
-        // handleDirtyFormErrors(validationResult)
+        const validationResult = validate(contactForm)
+        handleDirtyFormErrors(validationResult)
 
-        // if (validationResult.valid) {
-        //     setResult({ state: "loading" })
-        //     const result = await fetch("/api/email", {
-        //         method: "POST",
-        //         headers: {
-        //             Accept: "application/json",
-        //             "Content-Type": "application/json",
-        //         },
-        //         body: JSON.stringify({
-        //             email: contactForm.email.value,
-        //             message: contactForm.message.value,
-        //         }),
-        //     })
-        //     if (result.ok) {
-        //         setResult({ state: "success" })
-        //         setContactForm(INITIAL_FORM)
-        //     } else setResult({ state: "error" })
-        // }
+        if (validationResult.valid) {
+            setResult({ state: "loading" })
+            const result = await fetch("/api/email", {
+                method: "POST",
+                headers: {
+                    Accept: "application/json",
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                    email: contactForm.email.value,
+                    message: contactForm.message.value,
+                }),
+            })
+            if (result.ok) {
+                setResult({ state: "success" })
+                setContactForm(INITIAL_FORM)
+            } else setResult({ state: "error" })
+        }
     }, [validate, contactForm])
 
     return useMemo(

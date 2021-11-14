@@ -1,59 +1,34 @@
 import { createGlobalStyle } from "styled-components"
+import { theme } from "theme/theme"
 
 export const GlobalStyle = createGlobalStyle`
-  @font-face {
-    font-family: "Futura";
-    src: url("/fonts/FuturaPTLight.otf");
-    font-weight: 200;
-  }
-  @font-face {
-    font-family: "Futura";
-    src: url("/fonts/FuturaPTMedium.otf");
-    font-weight: 400;
-  }
-  @font-face {
-    font-family: "Futura";
-    src: url("/fonts/FuturaPTDemi.otf");
-    font-weight: 500;
-  }
-  @font-face {
-    font-family: "Futura";
-    src: url("/fonts/FuturaPTBold.otf");
-    font-weight: 600;
-  }
   body {
-    margin: 0;
-    background-color: ${({ theme }) => theme.palette.background};
-    overflow-x: hidden;
-  }
-  * {
-    font-family: "Futura";
-    box-sizing: border-box;
+    background-color: ${theme.palette.background};
   }
 
   p {
-    font-size: ${({ theme }) => theme.fontSize.base};
+    font-size: ${theme.fontSize.base};
   }
   
   h4 {
-    font-size: ${({ theme }) => theme.fontSize.medium};
+    font-size: ${theme.fontSize.medium};
     font-weight: normal;
   }
   h3 {
-    font-size: ${({ theme }) => theme.fontSize.large};
+    font-size: ${theme.fontSize.large};
     font-weight: normal;
   }
   h2 {
-    font-size: ${({ theme }) => theme.fontSize.xl};
+    font-size: ${theme.fontSize.xl};
   }
   h1 {
-    font-size: ${({ theme }) => theme.fontSize.main};
+    font-size: ${theme.fontSize.main};
   }
   a {
     cursor: pointer;
   }
   h1, h2, h3, h4, h5, p {
     margin: 0;
-    color: ${({ theme }) => theme.palette.primary}
+    color: ${theme.palette.primary}
   }
 `
