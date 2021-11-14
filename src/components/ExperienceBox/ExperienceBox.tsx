@@ -1,8 +1,6 @@
 import React from "react"
 import * as S from "./styles"
 import { CompanyEntry } from "./types"
-import Image from "next/image"
-import { Tooltip } from "@material-ui/core"
 import TechnologyIcon from "components/TechnologyIcon/TechnologyIcon"
 
 interface Props {

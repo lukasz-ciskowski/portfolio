@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled, { css } from "styled-components"
 import { theme } from "theme/theme"
 
 export const Section = styled.section`
@@ -37,13 +37,37 @@ export const ContactBox = styled.div`
         width: 100%;
         background-color: #17182f;
         border-radius: 20px;
-        filter: blur(4px);
         opacity: 0.7;
+        box-shadow: rgba(0, 0, 0, 0.2) 0px 7px 29px 0px;
     }
 
-    svg {
+    #contact-rocket {
         z-index: 2;
         height: 350px;
+    }
+`
+
+export const Wrapper = styled.div`
+    position: relative;
+    height: fit-content;
+`
+
+export const FloatingLoading = styled.div`
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 3;
+    &::before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background-color: ${theme.palette.background_darker};
+        opacity: 0.8;
     }
 `
 

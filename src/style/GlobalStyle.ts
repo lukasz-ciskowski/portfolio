@@ -29,7 +29,6 @@ export const GlobalStyle = createGlobalStyle`
   * {
     font-family: "Futura";
     box-sizing: border-box;
-    color: ${({ theme }) => theme.palette.primary}
   }
 
   p {
@@ -55,5 +54,6 @@ export const GlobalStyle = createGlobalStyle`
   }
   h1, h2, h3, h4, h5, p {
     margin: 0;
+    color: ${({ theme }) => theme.palette.primary}
   }
 `

@@ -12,7 +12,7 @@ export const Content = styled.section`
     max-width: 1400px;
     margin: 0 auto;
     padding: ${({ theme }) => theme.space.md};
-    height: 90vh;
+    height: 100vh;
 
     svg {
         overflow: visible;
@@ -106,11 +106,11 @@ export const HeroText = styled.div`
     }
 `
 
-export const CheckoutInidcator = styled.div`
+export const CheckoutInidcator = styled.p`
     position: absolute;
     bottom: ${({ theme }) => theme.space.sm};
     left: 50%;
-    bottom: -2vh;
+    bottom: 3vh;
     transform: translateX(-50%);
     display: flex;
     flex-direction: column;
