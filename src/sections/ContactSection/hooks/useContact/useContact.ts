@@ -52,20 +52,19 @@ export function useContact() {
 
         if (validationResult.valid) {
             setResult({ state: "loading" })
-            const result = await fetch("/api/email", {
+            const result = await fetch(`https://formsubmit.co/ajax/${process.env.FORMSUBMIT_PATH}`, {
                 method: "POST",
                 headers: {
-                    Accept: "application/json",
                     "Content-Type": "application/json",
+                    Accept: "application/json",
                 },
                 body: JSON.stringify({
                     email: contactForm.email.value,
-                    message: contactForm.message.value,
+                    name: contactForm.message.value,
                 }),
             })
             if (result.ok) {
                 setResult({ state: "success" })
-                setContactForm(INITIAL_FORM)
             } else setResult({ state: "error" })
         }
     }, [validate, contactForm])

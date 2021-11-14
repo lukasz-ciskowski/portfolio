@@ -1,15 +1,8 @@
 /** @type {import('next').NextConfig} */
 module.exports = {
     reactStrictMode: true,
-    async redirects() {
-        console.log(process.env.PROXY_URL)
-        return [
-            {
-                source: "/api/:path*",
-                destination: `${process.env.PROXY_URL}/api/:path*`,
-                permanent: true,
-            },
-        ]
+    env: {
+        FORMSUBMIT_PATH: process.env.FORMSUBMIT_PATH,
     },
     webpack(config) {
         config.module.rules.push({
