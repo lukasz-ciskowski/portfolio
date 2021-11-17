@@ -29,7 +29,14 @@ function Nav() {
                 <S.MenuItems>
                     {NAV_ITEMS.map((item) => (
                         <S.Item key={item.section}>
-                            <Link activeClass="active" to={item.section} spy smooth duration={500}>
+                            <Link
+                                activeClass="active"
+                                to={item.section}
+                                spy
+                                smooth
+                                duration={500}
+                                offset={-100}
+                            >
                                 {item.label}
                             </Link>
                         </S.Item>

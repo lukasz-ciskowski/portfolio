@@ -1,18 +1,27 @@
 import styled from "styled-components"
+import { theme } from "theme/theme"
 
 export const Section = styled.section`
     position: relative;
 `
 
-export const Content = styled.section`
+export const Content = styled.div`
     display: flex;
     height: 100%;
     align-items: center;
     justify-content: space-between;
     max-width: 1400px;
     margin: 0 auto;
-    padding: ${({ theme }) => theme.space.md};
+    padding: ${theme.space.md};
     height: 100vh;
+
+    &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+    }
 
     svg {
         overflow: visible;

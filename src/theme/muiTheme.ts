@@ -5,6 +5,7 @@ export const muiTheme = createTheme({
     palette: {
         primary: {
             main: theme.palette.highlight,
+            contrastText: theme.palette.primary
         },
         secondary: {
             main: theme.palette.primary,

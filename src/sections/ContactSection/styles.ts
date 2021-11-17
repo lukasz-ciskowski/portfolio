@@ -2,22 +2,7 @@ import styled, { css } from "styled-components"
 import { theme } from "theme/theme"
 
 export const Section = styled.section`
-    background-color: ${theme.palette.background_darker};
     position: relative;
-`
-
-export const Content = styled.div`
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: ${theme.space.xl} ${theme.space.md};
-    display: flex;
-    justify-content: center;
-    position: relative;
-    flex-direction: column;
-
-    .project-highlight {
-        color: ${theme.palette.highlight};
-    }
 `
 
 export const ContactBox = styled.div`
@@ -35,9 +20,9 @@ export const ContactBox = styled.div`
         inset: 0;
         height: 100%;
         width: 100%;
-        background-color: #17182f;
+        background-color: ${theme.palette.background};
         border-radius: 20px;
-        opacity: 0.7;
+        opacity: 1;
         box-shadow: rgba(0, 0, 0, 0.2) 0px 7px 29px 0px;
     }
 
@@ -60,7 +45,12 @@ export const FloatingLoading = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+
     z-index: 3;
+    > * {
+        z-index: 3;
+    }
     &::before {
         content: "";
         width: 100%;

@@ -1,25 +1,9 @@
 import styled from "styled-components"
+import { theme } from "theme/theme"
 
 export const Section = styled.section`
     position: relative;
-    background-color: ${({ theme }) => theme.palette.background_darker};
-`
-
-export const Content = styled.div`
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: ${({ theme }) => theme.space.md};
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    position: relative;
-
-    .experience-highlight {
-        color: ${({ theme }) => theme.palette.highlight};
-    }
-    h1 {
-        margin-bottom: ${({ theme }) => theme.space.xxs};
-    }
+    background-color: ${({ theme }) => theme.palette.background};
 `
 
 export const ExperiencesList = styled.div`

@@ -1,3 +1,4 @@
+import Footer from "components/Footer/Footer"
 import React from "react"
 import Particles from "react-tsparticles"
 import Nav from "../Nav/Nav"
@@ -11,13 +12,11 @@ interface Props {
 function Layout({ children }: Props) {
     return (
         <>
-            <Particles
-                id="tsparticles"
-                options={PARTICLES_OPTIONS}
-            />
+            <Particles id="tsparticles" options={PARTICLES_OPTIONS} />
             <S.MainContent id="main">
                 <Nav />
                 {children}
+                <Footer />
             </S.MainContent>
         </>
     )

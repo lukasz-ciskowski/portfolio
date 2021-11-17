@@ -5,14 +5,15 @@ import { SECTIONS } from "components/Nav/sections"
 import { EXPERIENCES } from "./experiences"
 import * as S from "./styles"
 import Rocket from "/public/images/rocket.svg"
+import SectionContainer from "components/SectionContainer/SectionContainer"
 
 function ExperienceSection() {
     return (
         <S.Section>
             <Element name={SECTIONS.Experience}>
-                <S.Content>
+                <SectionContainer>
                     <h1 data-aos="fade-right">
-                        <span className="experience-highlight">Exp</span>erience
+                        <span className="highlight">Exp</span>erience
                     </h1>
                     <S.RocketWrapper
                         data-aos="rocket"
@@ -26,7 +27,7 @@ function ExperienceSection() {
                             <ExperienceBox entry={exp} key={id} index={id} />
                         ))}
                     </S.ExperiencesList>
-                </S.Content>
+                </SectionContainer>
             </Element>
         </S.Section>
     )

@@ -1,7 +1,7 @@
 export interface ProjectEntry {
     name: string
     description: string
-    technologies: string[]
+    libraries: string[]
     imageSrc: string
     demoUrl?: string
     gitUrl?: string

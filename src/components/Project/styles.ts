@@ -77,8 +77,8 @@ export const ModalImageBox = styled.div<PortfolioBoxProps>`
     height: 100%;
     background: url(${({ bgUrl }) => bgUrl});
     background-size: cover;
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
+    border-top-left-radius: 16px;
+    border-bottom-left-radius: 16px;
 `
 
 export const ModalContentText = styled.div`
@@ -103,7 +103,9 @@ export const ModalContentText = styled.div`
 
 export const IconsContent = styled.div`
     display: flex;
-    column-gap: ${({ theme }) => theme.space.xs};
+    flex-wrap: wrap;
+    max-width: 100%;
+    gap: ${({ theme }) => theme.space.xxs};
 `
 
 export const LinksWrapper = styled.div`

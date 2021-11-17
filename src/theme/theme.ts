@@ -1,11 +1,11 @@
 export const theme = {
     palette: {
         primary: "#FFFFFF",
-        secondary: "#7c7d90",
-        background: "#17182F",
-        background_darker: "#111221",
+        primary_darker: "#e3e3e3",
+        secondary: "#919191",
+        background: "#262626",
+        background_darker: "#1c1c1c",
         highlight: "#E27DAC",
-        tertiary: "#1f2142",
     },
     fontSize: {
         small: "17px",

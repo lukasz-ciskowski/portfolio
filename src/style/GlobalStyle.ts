@@ -31,4 +31,8 @@ export const GlobalStyle = createGlobalStyle`
     margin: 0;
     color: ${theme.palette.primary}
   }
+
+  .highlight {
+    color: ${theme.palette.highlight};
+  }
 `

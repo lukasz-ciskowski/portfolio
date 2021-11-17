@@ -1,5 +1,6 @@
 import { SECTIONS } from "components/Nav/sections"
 import Project from "components/Project/Project"
+import SectionContainer from "components/SectionContainer/SectionContainer"
 import React from "react"
 import { Element } from "react-scroll"
 import { PROJECTS } from "./projects"
@@ -9,9 +10,9 @@ function ProjectsSection() {
     return (
         <S.Section>
             <Element name={SECTIONS.Projects}>
-                <S.Content>
+                <SectionContainer>
                     <h1 data-aos="fade-right">
-                        <span className="project-highlight">Proj</span>ects
+                        <span className="highlight">Proj</span>ects
                     </h1>
                     <S.ProjectsList>
                         {PROJECTS.map((project, index) => (
@@ -20,7 +21,7 @@ function ProjectsSection() {
                             </div>
                         ))}
                     </S.ProjectsList>
-                </S.Content>
+                </SectionContainer>
             </Element>
         </S.Section>
     )

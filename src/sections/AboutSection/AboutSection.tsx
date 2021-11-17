@@ -3,21 +3,22 @@ import { Element } from "react-scroll"
 import { SECTIONS } from "components/Nav/sections"
 import Image from "next/image"
 import * as S from "./styles"
+import SectionContainer from "components/SectionContainer/SectionContainer"
 
 function AboutSection() {
     return (
         <S.Section>
             <Element name={SECTIONS.About}>
-                <S.Content>
+                <SectionContainer>
                     <h1 data-aos="fade-right">
-                        <span className="about-highlight">About</span> Me
+                        <span className="highlight">About</span> Me
                     </h1>
                     <S.Description>
                         <S.TextWrapper data-aos="zoom-in" data-aos-delay="400">
                             <S.CommandPrompt>&gt;</S.CommandPrompt>
                             <p>
-                                I do <span className="about-highlight">Frontend Development</span>{" "}
-                                using <span className="about-highlight">#React</span> technology with
+                                I do <span className="highlight">Frontend Development</span>{" "}
+                                using <span className="highlight">#React</span> technology with
                                 passion and love to the process of creation and design. In my career
                                 I had an opportunity to participate in projects as a frontend and
                                 backend developer. I am into methoring and passing my experience to
@@ -34,7 +35,7 @@ function AboutSection() {
                             data-aos-delay="400"
                         />
                     </S.Description>
-                </S.Content>
+                </SectionContainer>
             </Element>
         </S.Section>
     )

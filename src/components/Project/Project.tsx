@@ -1,15 +1,14 @@
 import React, { useState } from "react"
 import { ProjectEntry } from "./types"
 import * as S from "./styles"
-import { Button, IconButton, Modal } from "@material-ui/core"
-import TechnologyIcon from "components/TechnologyIcon/TechnologyIcon"
+import { Button, Chip, IconButton, Modal } from "@material-ui/core"
 import CloseButton from "/public/images/close.svg"
 
 interface Props {
     entry: ProjectEntry
 }
 
-function Project({ entry: { imageSrc, name, description, technologies, gitUrl, demoUrl } }: Props) {
+function Project({ entry: { imageSrc, name, description, libraries, gitUrl, demoUrl } }: Props) {
     const [modalOpen, setModalOpen] = useState(false)
 
     const handleOpen = () => setModalOpen(true)
@@ -38,7 +37,7 @@ function Project({ entry: { imageSrc, name, description, technologies, gitUrl, d
                     <S.CloseButton>
                         <IconButton size="medium" onClick={handleClose}>
                             <CloseButton />
-                        </IconButton >
+                        </IconButton>
                     </S.CloseButton>
                     <S.ModalImageBox bgUrl={`/images/projects/${imageSrc}.png`} className="image" />
                     <S.ModalContentText>
@@ -51,23 +50,23 @@ function Project({ entry: { imageSrc, name, description, technologies, gitUrl, d
                             <h4>{description}</h4>
                         </div>
                         <div>
-                            <p>Technologies</p>
+                            <p>Libraries used</p>
                             <S.IconsContent>
-                                {technologies.map((tech, index) => (
-                                    <TechnologyIcon title={tech} key={index} />
+                                {libraries.map((lib, index) => (
+                                    <Chip label={lib} key={index} />
                                 ))}
                             </S.IconsContent>
                         </div>
                         <S.LinksWrapper>
                             {demoUrl && (
-                                <a href={demoUrl}>
+                                <a target="_blank" href={demoUrl}>
                                     <Button variant="contained" color="primary" size="large">
                                         Open live demo
                                     </Button>
                                 </a>
                             )}
                             {gitUrl && (
-                                <a href={demoUrl}>
+                                <a target="_blank" href={demoUrl}>
                                     <Button variant="contained" color="primary" size="large">
                                         View code
                                     </Button>

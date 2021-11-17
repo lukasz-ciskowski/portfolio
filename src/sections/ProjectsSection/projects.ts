@@ -6,8 +6,6 @@ export const PROJECTS: ProjectEntry[] = [
         description:
             "Personal portfolio website made with nextjs library, using styled-components, material-ui, AOS, particles.js and react-scroll.",
         imageSrc: "portfolio",
-        technologies: ["nextjs", "material-ui", "styled-components"],
-        demoUrl: "aaa",
-        gitUrl: "bbb",
+        libraries: ["NextJs", "Material ui", "Styled-Components", "React-Scroll", "AOS"],
     },
 ]

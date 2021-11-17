@@ -5,6 +5,7 @@ import { Element } from "react-scroll"
 import Contact from "/public/images/contact.svg"
 import * as S from "./styles"
 import { useContact } from "./hooks/useContact/useContact"
+import SectionContainer from "components/SectionContainer/SectionContainer"
 
 function ContactSection() {
     const { response, formErrors, onChange, onBlur, onSubmit } = useContact()
@@ -12,15 +13,25 @@ function ContactSection() {
     return (
         <S.Section>
             <Element name={SECTIONS.Contact}>
-                <S.Content>
+                <SectionContainer>
                     <h1 data-aos="fade-right">
-                        <span className="project-highlight">Contact</span> me
+                        <span className="highlight">Contact</span> me
                     </h1>
                     <S.Wrapper>
                         <S.ContactBox data-aos="fade-up">
-                            {response?.state === "loading" && (
+                            {(response?.state === "loading" || response?.state === "success") && (
                                 <S.FloatingLoading data-aos="fade-in" data-aos-duration="300">
-                                    <CircularProgress color="primary" size={80} />
+                                    {response.state === "loading" && (
+                                        <CircularProgress color="primary" size={80} />
+                                    )}
+                                    {response.state === "success" && (
+                                        <>
+                                            <h2 data-aos="fade-in">Thank you!</h2>
+                                            <p data-aos="fade-in" data-aos-delay="200">
+                                                I will try to reply you as soon as possible.
+                                            </p>
+                                        </>
+                                    )}
                                 </S.FloatingLoading>
                             )}
                             <S.ContactFields>
@@ -54,7 +65,7 @@ function ContactSection() {
                             <Contact id="contact-rocket" data-aos="fade-up" data-aos-delay="200" />
                         </S.ContactBox>
                     </S.Wrapper>
-                </S.Content>
+                </SectionContainer>
             </Element>
         </S.Section>
     )
