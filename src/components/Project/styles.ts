@@ -7,6 +7,7 @@ export const Content = styled.div`
     position: relative;
     overflow: hidden;
     border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 8px 24px;
     &:hover {
         .image {
             filter: blur(2px);
@@ -36,7 +37,7 @@ export const ReadMore = styled.div`
     width: 100%;
     height: 100%;
     opacity: 0;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.2);
     transition: opacity 0.5s;
     filter: blur(-2px);
     position: absolute;

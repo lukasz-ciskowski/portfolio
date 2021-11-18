@@ -10,7 +10,7 @@ export const Content = styled.div`
     height: 100%;
     align-items: center;
     justify-content: space-between;
-    max-width: 1400px;
+    max-width: 1500px;
     margin: 0 auto;
     padding: ${theme.space.md};
     height: 100vh;
