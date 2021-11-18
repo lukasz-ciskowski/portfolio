@@ -12,19 +12,43 @@ export const Navigation = styled.nav`
     h4 {
         transition: font-size 300ms;
     }
+    .burger-button svg {
+        transition: height 300ms, width 300ms;
+    }
 
     &.scrolled {
         box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 6px 0px;
         h4 {
             font-size: ${theme.fontSize.small};
         }
+        .burger-button svg {
+            height: 25px;
+            width: 25px;
+        }
     }
     z-index: 5;
+
+    .desktop-menu-items {
+        display: flex;
+    }
+    .burger-button {
+        display: none;
+        padding: 8px;
+    }
+    @media screen and (max-width: 950px) {
+        .desktop-menu-items {
+            display: none;
+        }
+        .burger-button {
+            display: block;
+        }
+    }
 `
 
 export const Content = styled.div`
     display: flex;
     justify-content: space-between;
+    align-items: center;
     max-width: 1500px;
     margin: 0 auto;
     padding: 0 ${theme.space.md};
@@ -43,6 +67,21 @@ export const Logo = styled.h4`
 export const MenuItems = styled.div`
     display: flex;
     column-gap: ${theme.space.md};
+`
+
+export const MobileMenuItems = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: ${theme.space.sm};
+    background-color: ${theme.palette.background_darker};
+    overflow: hidden;
+    padding: ${theme.space.md} 0 ${theme.space.lg};
+    position: relative;
+
+    h3 {
+        margin-bottom: ${theme.space.xxs};
+    }
 `
 
 export const Item = styled.h4`
@@ -74,4 +113,20 @@ export const Item = styled.h4`
             transform: translate3d(0, 0, 0);
         }
     }
+`
+export const Puller = styled.div`
+    border-radius: 5px;
+    width: 30px;
+    height: 4px;
+    background-color: ${theme.palette.secondary};
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+`
+
+export const CloseButton = styled.div`
+    position: absolute;
+    top: ${theme.space.sm};
+    right: ${theme.space.sm};
 `
