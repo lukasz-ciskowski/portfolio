@@ -105,7 +105,7 @@ export const IconsContent = styled.div`
     display: flex;
     flex-wrap: wrap;
     max-width: 100%;
-    gap: ${({ theme }) => theme.space.xxs};
+    gap: ${theme.space.xxs};
 `
 
 export const LinksWrapper = styled.div`

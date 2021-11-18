@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import { theme } from "theme/theme"
 
 export const Container = styled.div`
     display: flex;
@@ -10,13 +11,13 @@ export const Container = styled.div`
         flex-direction: row-reverse;
         .experience-data {
             h3:first-of-type {
-                margin-left: ${({ theme }) => theme.space.xs};
+                margin-left: ${theme.space.xs};
             }
         }
     }
     .experience-data {
         h3:first-of-type {
-            margin-left: -${({ theme }) => theme.space.xs};
+            margin-left: -${theme.space.xs};
         }
     }
 `
@@ -24,14 +25,14 @@ export const Container = styled.div`
 export const TextSection = styled.div`
     display: flex;
     flex-direction: column;
-    row-gap: ${({ theme }) => theme.space.xs};
+    row-gap: ${theme.space.xs};
     width: 75ch;
 `
 
 export const DatesSection = styled.div`
     h3 {
         &:first-of-type {
-            color: ${({ theme }) => theme.palette.highlight};
+            color: ${theme.palette.highlight};
         }
         letter-spacing: 0.4em;
     }
@@ -41,20 +42,20 @@ export const RowContent = styled.div`
     display: flex;
     flex-direction: row;
     align-items: center;
-    column-gap: ${({ theme }) => theme.space.sm};
+    column-gap: ${theme.space.sm};
 `
 
 export const IconsContent = styled(RowContent)`
-    column-gap: ${({ theme }) => theme.space.xs};
+    column-gap: ${theme.space.xs};
 `
 
 export const PartTimeText = styled.p`
     font-weight: lighter;
-    color: ${({ theme }) => theme.palette.secondary};
+    color: ${theme.palette.secondary};
 `
 
 export const PositionText = styled.h3`
-    color: ${({ theme }) => theme.palette.secondary};
+    color: ${theme.palette.secondary};
 `
 
 export const Description = styled.p`

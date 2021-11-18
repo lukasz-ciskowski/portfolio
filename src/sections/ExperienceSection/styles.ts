@@ -3,14 +3,14 @@ import { theme } from "theme/theme"
 
 export const Section = styled.section`
     position: relative;
-    background-color: ${({ theme }) => theme.palette.background};
+    background-color: ${theme.palette.background};
 `
 
 export const ExperiencesList = styled.div`
-    padding: ${({ theme }) => theme.space.md};
+    padding: ${theme.space.md};
     display: flex;
     flex-direction: column;
-    row-gap: ${({ theme }) => theme.space.xl};
+    row-gap: ${theme.space.xl};
     position: relative;
 `
 

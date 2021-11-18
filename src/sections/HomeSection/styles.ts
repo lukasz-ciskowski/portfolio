@@ -76,7 +76,7 @@ export const Content = styled.div`
     #astronaut_svg__left-arm {
         @keyframes left-arm-move {
             from {
-                transform: rotate(-3deg) translate3d(3px, 3px, 0);
+                transform: rotate(-2deg) translate3d(2px, 2px, 0);
             }
             to {
                 transform: rotate(0deg) translate3d(0, 0, 0);
@@ -108,7 +108,7 @@ export const Content = styled.div`
 
 export const HeroText = styled.div`
     h3 {
-        color: ${({ theme }) => theme.palette.highlight};
+        color: ${theme.palette.highlight};
     }
     h1 {
         font-weight: 500;
@@ -117,7 +117,7 @@ export const HeroText = styled.div`
 
 export const CheckoutInidcator = styled.p`
     position: absolute;
-    bottom: ${({ theme }) => theme.space.sm};
+    bottom: ${theme.space.sm};
     left: 50%;
     bottom: 3vh;
     transform: translateX(-50%);

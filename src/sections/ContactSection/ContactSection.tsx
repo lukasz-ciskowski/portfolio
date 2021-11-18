@@ -35,18 +35,22 @@ function ContactSection() {
                                 </S.FloatingLoading>
                             )}
                             <S.ContactFields>
+                                <label htmlFor="email">Your email</label>
                                 <TextField
                                     label="Your email"
                                     name="email"
+                                    id="name"
                                     onChange={onChange("email")}
                                     onBlur={onBlur}
                                     error={!!formErrors.errors.email}
                                     helperText={formErrors.errors.email}
                                 />
+                                <label htmlFor="question">Your question</label>
                                 <TextField
                                     label="Your question"
                                     multiline
                                     rows={8}
+                                    id="question"
                                     onChange={onChange("message")}
                                     onBlur={onBlur}
                                     error={!!formErrors.errors.message}

@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { theme } from "theme/theme";
 
 export const Content = styled.div`
-    max-width: 1400px;
+    max-width: 1500px;
     min-height: 70vh;
     margin: 0 auto;
     padding: ${theme.space.md};

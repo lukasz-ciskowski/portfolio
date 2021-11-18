@@ -1,7 +1,8 @@
 import styled from "styled-components"
+import { theme } from "theme/theme"
 
 export const Section = styled.section`
-    background: ${({ theme }) => theme.palette.background_darker};
+    background: ${theme.palette.background_darker};
     position: relative;
 `
 
@@ -11,8 +12,8 @@ export const Description = styled.div`
     position: relative;
     flex-direction: row;
     align-items: center;
-    column-gap: ${({ theme }) => theme.space.xl};
-    padding: 0 ${({ theme }) => theme.space.md};
+    column-gap: ${theme.space.xl};
+    padding: 0 ${theme.space.md};
     margin-left: calc((1em + 8px) * -1);
 
     img {
@@ -32,12 +33,12 @@ export const TextWrapper = styled.div`
 export const CommandPrompt = styled.div`
     line-height: 30px;
     font-weight: bold;
-    color: ${({ theme }) => theme.palette.highlight};
-    margin-right: ${({ theme }) => theme.space.xs};
+    color: ${theme.palette.highlight};
+    margin-right: ${theme.space.xs};
 `
 
 export const RocketWrapper = styled.div`
-    margin: ${({ theme }) => theme.space.xl} auto 0;
+    margin: ${theme.space.xl} auto 0;
     transform-style: preserve-3d;
     margin-left: 0;
     > div {

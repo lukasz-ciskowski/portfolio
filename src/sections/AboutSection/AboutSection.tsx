@@ -1,7 +1,6 @@
 import React from "react"
 import { Element } from "react-scroll"
 import { SECTIONS } from "components/Nav/sections"
-import Image from "next/image"
 import * as S from "./styles"
 import SectionContainer from "components/SectionContainer/SectionContainer"
 
@@ -27,12 +26,13 @@ function AboutSection() {
                                 and psychology.
                             </p>
                         </S.TextWrapper>
-                        <Image
+                        <img
                             src="/images/avatar.png"
                             width="350px"
                             height="350px"
                             data-aos="zoom-in"
                             data-aos-delay="400"
+                            alt="avatar"
                         />
                     </S.Description>
                 </SectionContainer>
