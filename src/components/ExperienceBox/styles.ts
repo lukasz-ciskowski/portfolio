@@ -91,7 +91,7 @@ export const PartTimeText = styled.p`
     color: ${theme.palette.secondary};
 `
 
-export const PositionText = styled.h3`
+export const PositionText = styled.h4`
     color: ${theme.palette.secondary};
 `
 

@@ -11,9 +11,9 @@ export const theme = {
         small: "17px",
         base: "19px",
         medium: "21px",
-        large: "27px",
-        xl: "36px",
-        main: "55px",
+        large: "26px",
+        xl: "32px",
+        main: "48px",
     },
     space: {
         xxxs: "0.25em",

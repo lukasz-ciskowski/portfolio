@@ -32,6 +32,10 @@ export const RocketWrapper = styled.div`
         }
     }
 
+    @media (max-width: 950px) {
+        display: none;
+    }
+
     @keyframes flameWobble {
         50% {
             transform: scale(1, 1.2) translate(30px, -70px) rotate(2deg);
