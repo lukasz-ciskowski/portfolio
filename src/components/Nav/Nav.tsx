@@ -34,7 +34,7 @@ function Nav() {
                     </S.Logo>
                 </Link>
                 <IconButton className="burger-button" onClick={handleOpenDrawer}>
-                    <Burger width={30} height={30} />
+                    <Burger width={24} height={24} />
                 </IconButton>
                 <S.MenuItems className="desktop-menu-items">
                     {NAV_ITEMS.map((item) => (
