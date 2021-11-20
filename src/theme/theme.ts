@@ -8,12 +8,12 @@ export const theme = {
         highlight: "#E27DAC",
     },
     fontSize: {
-        small: "17px",
-        base: "19px",
-        medium: "21px",
-        large: "26px",
-        xl: "32px",
-        main: "48px",
+        small: "16px",
+        base: "18px",
+        medium: "20px",
+        large: "25px",
+        xl: "31px",
+        main: "46px",
     },
     space: {
         xxxs: "0.25em",
