@@ -42,6 +42,9 @@ export const Navigation = styled.nav`
         .burger-button {
             display: block;
         }
+        &.scrolled {
+            padding: ${theme.space.xxs} 0;
+        }
     }
 `
 

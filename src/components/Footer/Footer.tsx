@@ -7,7 +7,7 @@ function Footer() {
     return (
         <S.FooterSection>
             <S.Content>
-                <S.Overcap>
+                <S.Overlap>
                     <h3>Personal Portfolio</h3>
                     <S.MenuItems>
                         {NAV_ITEMS.map((item) => (
@@ -26,7 +26,7 @@ function Footer() {
                         ))}
                     </S.MenuItems>
                     <small>&copy; 2021 Łukasz Ciskowski</small>
-                </S.Overcap>
+                </S.Overlap>
                 <S.Contact>
                     <h4>Lets talk</h4>
                     <a href="mailto:lukasz_ciskowski@wp.pl">lukasz_ciskowski@wp.pl</a>

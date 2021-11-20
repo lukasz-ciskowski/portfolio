@@ -12,6 +12,11 @@ export const ExperiencesList = styled.div`
     flex-direction: column;
     row-gap: ${theme.space.xl};
     position: relative;
+    overflow: hidden;
+    
+    @media (max-width: 950px) {
+        padding: ${theme.space.md} 0;
+    }
 `
 
 export const RocketWrapper = styled.div`

@@ -2,9 +2,14 @@ import styled from "styled-components"
 import { theme } from "theme/theme"
 
 export const FooterSection = styled.footer`
-position: relative;
+    position: relative;
     background-color: ${theme.palette.primary_darker};
-    p,h2,h3,h4,small,a {
+    p,
+    h2,
+    h3,
+    h4,
+    small,
+    a {
         color: ${theme.palette.background_darker};
     }
 `
@@ -15,9 +20,14 @@ export const Content = styled.section`
     padding: ${theme.space.lg};
     display: flex;
     justify-content: space-between;
+
+    @media (max-width: 950px) {
+        padding: ${theme.space.sm};
+        align-items: center;
+    }
 `
 
-export const Overcap = styled.div`
+export const Overlap = styled.div`
     small {
         font-weight: 100;
         display: block;
@@ -42,6 +52,12 @@ export const MenuItems = styled.div`
     display: flex;
     column-gap: ${theme.space.md};
     margin-top: ${theme.space.md};
+
+    @media (max-width: 950px) {
+        flex-wrap: wrap;
+        flex-direction: column;
+        column-gap: ${theme.space.xs};
+    }
 `
 
 export const Item = styled.h4`

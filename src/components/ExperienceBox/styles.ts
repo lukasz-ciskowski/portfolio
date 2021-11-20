@@ -20,13 +20,37 @@ export const Container = styled.div`
             margin-left: -${theme.space.xs};
         }
     }
+
+    @media (max-width: 950px) {
+        width: 100%;
+        flex-direction: column-reverse;
+        align-items: unset;
+        .experience-data {
+            text-align: right;
+            h3:first-of-type {
+                margin-right: ${theme.space.sm};
+            }
+        }
+        &:nth-child(even) {
+            flex-direction: column-reverse;
+            margin-right: 0;
+
+            .experience-data {
+                text-align: right;
+                h3:first-of-type {
+                    margin-right: ${theme.space.sm};
+                }
+            }
+        }
+    }
 `
 
 export const TextSection = styled.div`
     display: flex;
     flex-direction: column;
     row-gap: ${theme.space.xs};
-    width: 75ch;
+    max-width: 75ch;
+    width: 100%;
 `
 
 export const DatesSection = styled.div`
@@ -36,6 +60,9 @@ export const DatesSection = styled.div`
         }
         letter-spacing: 0.4em;
     }
+    @media (max-width: 950px) {
+        margin-bottom: ${theme.space.sm};
+    }
 `
 
 export const RowContent = styled.div`
@@ -43,10 +70,20 @@ export const RowContent = styled.div`
     flex-direction: row;
     align-items: center;
     column-gap: ${theme.space.sm};
+
+    @media (max-width: 950px) {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 `
 
 export const IconsContent = styled(RowContent)`
     column-gap: ${theme.space.xs};
+
+    @media (max-width: 950px) {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
 `
 
 export const PartTimeText = styled.p`

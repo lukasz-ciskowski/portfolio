@@ -31,6 +31,7 @@ function Project({ entry: { imageSrc, name, description, libraries, gitUrl, demo
                     justifyContent: "center",
                     width: "100%",
                     height: "100%",
+                    padding: 10
                 }}
             >
                 <S.ModalContent data-aos="fade-in" data-aos-duration="200">

@@ -10,4 +10,8 @@ export const Content = styled.div`
     justify-content: center;
     position: relative;
     flex-direction: column;
+
+    @media (max-width: 950px) {
+        padding: ${theme.space.sm};
+    }
 `

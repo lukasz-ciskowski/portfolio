@@ -28,13 +28,7 @@ function ExperienceBox({
                 <S.Description>{description}</S.Description>
                 <S.IconsContent>
                     {technologies.map((tech, index) => (
-                        <TechnologyIcon
-                            title={tech}
-                            data-aos="fade-up"
-                            data-aos-delay={index * 100}
-                            data-aos-offset="-100"
-                            key={index}
-                        />
+                        <TechnologyIcon title={tech} key={index} />
                     ))}
                 </S.IconsContent>
             </S.TextSection>

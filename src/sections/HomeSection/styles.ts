@@ -15,19 +15,22 @@ export const Content = styled.div`
     padding: ${theme.space.md};
     height: 100vh;
 
-    &::before {
-        content: "";
-        position: absolute;
-        inset: 0;
-        width: 100%;
-        height: 100%;
-    }
-
     svg {
         overflow: visible;
         z-index: 2;
-        min-width: 300px;
+        height: 650px;
+        width: 650px;
     }
+
+    @media (max-width: 950px) {
+        flex-direction: column-reverse;
+        justify-content: space-evenly;
+        svg {
+            height: 200px;
+            width: 200px;
+        }
+    }
+
     #astronaut_svg__Astronaut {
         @keyframes astronaut-float {
             from {

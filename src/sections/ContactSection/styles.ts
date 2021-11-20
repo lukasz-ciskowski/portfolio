@@ -30,6 +30,16 @@ export const ContactBox = styled.div`
         z-index: 2;
         height: 350px;
     }
+    @media (max-width: 950px) {
+        margin: ${theme.space.md} 0;
+        padding: ${theme.space.xs};
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        #contact-rocket {
+            display: none;
+        }
+    }
 `
 
 export const Wrapper = styled.div`
@@ -68,5 +78,13 @@ export const ContactFields = styled.div`
     width: 60%;
     button {
         margin-top: ${theme.space.sm};
+    }
+    
+    @media (max-width: 950px) {
+        width: 100%;
+        button {
+            margin-left: auto;
+            margin-right: auto;
+        }
     }
 `

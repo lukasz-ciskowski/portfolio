@@ -61,6 +61,10 @@ export const ModalContent = styled.div`
     height: 100%;
     width: 100%;
     position: relative;
+
+    @media (max-width: 950px) {
+        flex-direction: column;
+    }
 `
 
 export const CloseButton = styled.div`
@@ -80,6 +84,10 @@ export const ModalImageBox = styled.div<PortfolioBoxProps>`
     background-size: cover;
     border-top-left-radius: 16px;
     border-bottom-left-radius: 16px;
+
+    @media (max-width: 950px) {
+        display: none;
+    }
 `
 
 export const ModalContentText = styled.div`
