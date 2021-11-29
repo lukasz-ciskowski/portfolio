@@ -12,7 +12,7 @@ import ContactSection from "sections/ContactSection/ContactSection"
 
 const Home: NextPage = () => {
     useEffect(() => {
-        AOS.init({ easing: "ease-out-cubic", once: true, duration: 600 })
+        AOS.init({ easing: "ease-out-cubic", once: true, duration: 500 })
     }, [])
 
     return (

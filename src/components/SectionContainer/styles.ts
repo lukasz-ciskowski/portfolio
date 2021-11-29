@@ -12,6 +12,6 @@ export const Content = styled.div`
     flex-direction: column;
 
     @media (max-width: 950px) {
-        padding: ${theme.space.sm};
+        padding: ${theme.space.xl} ${theme.space.sm};
     }
 `

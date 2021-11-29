@@ -16,7 +16,7 @@ function ExperienceBox({
         <S.Container>
             <S.TextSection
                 data-aos={index % 2 === 1 ? "fade-left" : "fade-right"}
-                data-aos-duration="700"
+                data-aos-duration="600"
             >
                 <S.RowContent>
                     {partTimeExp && <S.PartTimeText>Part time experience</S.PartTimeText>}
@@ -34,7 +34,7 @@ function ExperienceBox({
             </S.TextSection>
             <S.DatesSection
                 data-aos={index % 2 === 1 ? "fade-right" : "fade-left"}
-                data-aos-duration="700"
+                data-aos-duration="600"
                 className="experience-data"
             >
                 <h3>{endsAt || "Present"}</h3>

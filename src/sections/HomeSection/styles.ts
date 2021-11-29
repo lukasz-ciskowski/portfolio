@@ -20,14 +20,20 @@ export const Content = styled.div`
         z-index: 2;
         height: 650px;
         width: 650px;
+
+        @media (max-width: 1400px) {
+            height: 500px;
+            width: 500px;
+        }
     }
 
     @media (max-width: 950px) {
         flex-direction: column-reverse;
         justify-content: space-evenly;
+        padding: ${theme.space.md} ${theme.space.sm};
         svg {
-            height: 200px;
-            width: 200px;
+            height: 300px;
+            width: 300px;
         }
     }
 

@@ -31,7 +31,7 @@ function HomeSection() {
                     </S.HeroText>
                     <Astronaut data-aos="fade" data-aos-delay="200" />
                 </S.Content>
-                <Link to={SECTIONS.About} smooth duration={500}>
+                <Link to={SECTIONS.About} smooth>
                     <div data-aos="fade" data-aos-delay="1200" data-aos-offset="-200">
                         <S.CheckoutInidcator ref={indicatorRef}>
                             Check it out <Arrow id="checkout-indicator-arrow" />

@@ -28,7 +28,7 @@ function Nav() {
     return (
         <S.Navigation ref={navbarRef}>
             <S.Content>
-                <Link to={SECTIONS.Home} spy smooth duration={500}>
+                <Link to={SECTIONS.Home} spy smooth>
                     <S.Logo>
                         <span>Łukasz</span> <span>Ciskowski</span>
                     </S.Logo>
@@ -39,14 +39,7 @@ function Nav() {
                 <S.MenuItems className="desktop-menu-items">
                     {NAV_ITEMS.map((item) => (
                         <S.Item key={item.section}>
-                            <Link
-                                activeClass="active"
-                                to={item.section}
-                                spy
-                                smooth
-                                duration={500}
-                                offset={-100}
-                            >
+                            <Link activeClass="active" to={item.section} spy smooth offset={-100}>
                                 {item.label}
                             </Link>
                         </S.Item>
@@ -80,7 +73,6 @@ function Nav() {
                                         to={item.section}
                                         spy
                                         smooth
-                                        duration={500}
                                         offset={-100}
                                     >
                                         {item.label}

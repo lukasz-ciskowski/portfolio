@@ -17,7 +17,6 @@ function Footer() {
                                     to={item.section}
                                     spy
                                     smooth
-                                    duration={500}
                                     offset={-100}
                                 >
                                     {item.label}
