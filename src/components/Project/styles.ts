@@ -64,6 +64,9 @@ export const ModalContent = styled.div`
 
     @media (max-width: 950px) {
         flex-direction: column;
+        max-height: 100%;
+        height: fit-content;
+        padding: ${theme.space.xs} 0;
     }
 `
 

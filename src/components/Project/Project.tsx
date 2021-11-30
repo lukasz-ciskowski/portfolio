@@ -67,7 +67,7 @@ function Project({ entry: { imageSrc, name, description, libraries, gitUrl, demo
                                 </a>
                             )}
                             {gitUrl && (
-                                <a target="_blank" href={demoUrl}>
+                                <a target="_blank" href={gitUrl}>
                                     <Button variant="contained" color="primary" size="large">
                                         View code
                                     </Button>

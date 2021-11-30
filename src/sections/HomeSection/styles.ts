@@ -29,7 +29,7 @@ export const Content = styled.div`
 
     @media (max-width: 950px) {
         flex-direction: column-reverse;
-        justify-content: space-evenly;
+        justify-content: center;
         padding: ${theme.space.md} ${theme.space.sm};
         svg {
             height: 300px;
